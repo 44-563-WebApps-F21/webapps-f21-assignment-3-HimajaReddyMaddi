@@ -32,8 +32,17 @@
                 <td>Nutella Shake</td><td>MOM's Hyd</td><td>180</td>
             </tr>
         </table>
-
-
+        <hr>
+        <h4>Algorithm for Binomial coefficients</h4>
+        <blockquote cite="https://www.geeksforgeeks.org/binomial-coefficient-dp-9/">Binomial coefficients (nk) are the number of ways to select a set of k elements from n different elements without taking into account the order of arrangement of these elements</blockquote>
+        <pre>int C(int n, int k) {
+            int res = 1;
+            for (int i = n - k + 1; i <= n; ++i)
+                res *= i;
+            for (int i = 2; i <= k; ++i)
+                res /= i;
+            return res;
+        }</pre>
     </body>
 
 </html>
